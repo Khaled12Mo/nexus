@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare different video games, you can compare up to 4 games , choose the best one wisly , find the suitable game for you , enjoy !">
+  <link rel="stylesheet" href="./assist/css/compare.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <title>app-Compare games</title>
+</head>
+<body>
+  <nav id = "sidebar" class = "sidebar">    <div>
+            <h1 ><a class="nexus" href="">NEXUS</a></h1>
+        </div>
+        <ul class="nav-list">
+            <li><a class="nav-item" href=""><i class="bi bi-house-door"></i>HOME</a></li>
+            <li><a class="nav-item" href=""><i class="bi bi-controller"></i>LIBRARY</a></li>
+            <li><a class="nav-item" href=""><i class="bi bi-search"></i>SEARCH</a></li>
+            <li><a class="nav-item-active" href=""><i class="bi bi-arrow-left-right"></i>COMPARE</a></li>
+            <li><a class="nav-item" href=""><i class="bi bi-person"></i>PROFILE</a></li>
+            <li><a class="nav-item" href=""><i class="bi bi-headset"></i>SUPPORT</a></li>
+        </ul>
+        <ul class="nav-settings">
+            <li><a class="nav-item" href=""><i class="bi bi-gear"></i>SETTINGS</a></li>
+        </ul></nav>
+  <div id = "containt" class ="containt">
+    <div class = "top">
+    <button  class="menu" onclick="fullsize()"><i class="bi bi-list"></i></button><button id = "mode" class="theme" onclick="light()">🌙</button></div>
+    <header>
+      <h1> Compare <span id = "word">Games</span>  </h1>
+      <p>choose 4 games from the lists , compare them , and play!</p>
+    </header>
+    <main>
+      <div>
+      <div class="searchcon">
+        <input type="text" name="search" id="search" placeholder="Search for a game..." onkeyup="filtergames()">
+      </div>
+      <div class="selects">
+        <div class="indsel">
+        <label for="sel1">Game 1 :</label>
+        <select onchange =" addtoset()" name="sel1" id="sel1">
+          <option value=""  > select a game... </option>
+        </select></div>
+        <div class="indsel">
+        <label for="sel2">Game 2 :</label><select onchange =" addtoset()" name="sel2" id="sel2">
+          <option value=""  > select a game... </option>
+        </select></div>
+        <div class="indsel">
+        <label for="sel3">Game 3 :</label><select onchange =" addtoset()" name="sel3" id="sel3">
+          <option value=""  > select a game... </option>
+        </select></div>
+        <div class="indsel">
+        <label for="sel4">Game 4 :</label><select onchange =" addtoset()" name="sel4" id="sel4">
+          <option value=""  > select a game... </option>
+        </select></div>
+
+      </div>
+      <div class="compdiv">
+        <table id="comptable">
+
+
+        </table>
+
+      </div>
+      </div>
+      
+
+    </main>
+        <footer class="main-footer">
+    <div class="footer-brand">NEXUS</div>
+    
+    <div class="footer-text">
+        © 2026 NEXUS GAMING. ENGINEERED FOR PERFORMANCE.
+    </div>
+    
+    <div class="footer-links">
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">TERMS OF SERVICE</a>
+    </div>
+</footer>
+  </div>
+  <script src="./compare.js"></script>
+</body>
+</html>
