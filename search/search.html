@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NEXUS Search</title>
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script defer src="search.js"></script>
+</head>
+<body>
+    
+    <nav class="sidebar">
+        <div>
+            <h1 ><a class="nexus" href="">NEXUS</a></h1>
+        </div>
+        <ul class="nav-list">
+            <li><a class="nav-item" href=""><i class="bi bi-house-door"></i>HOME</a></li>
+            <li><a class="nav-item-active" href=""><i class="bi bi-controller"></i>LIBRARY</a></li>
+            <li><a class="nav-item" href=""><i class="bi bi-search"></i>SEARCH</a></li>
+            <li><a class="nav-item" href=""><i class="bi bi-arrow-left-right"></i>COMPARE</a></li>
+            <li><a class="nav-item" href=""><i class="bi bi-person"></i>PROFILE</a></li>
+            <li><a class="nav-item" href=""><i class="bi bi-headset"></i>SUPPORT</a></li>
+        </ul>
+        <ul class="nav-settings">
+            <li><a class="nav-item" href=""><i class="bi bi-gear"></i>SETTINGS</a></li>
+        </ul>
+    </nav>
+    <main class="main-wrapper">
+        <div class="content-area">
+            <div class="heading">
+                <h2>ADVANCED SEARCH</h2>
+                <p>Discover your next obsession across 15,000+ titles.</p>
+            </div>
+            <div class="search-box">
+                <i class="search-icon">🔍</i>
+                <input id="searchInput" type="text" placeholder="Search by title, publisher, or tags...">
+                <button id="searchButton" type="button">SEARCH</button>
+            </div>
+            <div class="filters">
+                <div class="filter-block genre-box">
+                    <h3>Genre</h3>
+                    <div class="genre-buttons">
+                        <button type="button" data-genre="Action">Action</button>
+                        <button type="button" data-genre="RPG">RPG</button>
+                        <button type="button" data-genre="Shooter">Shooter</button>
+                        <button type="button" data-genre="Strategy">Strategy</button>
+                        <button type="button" data-genre="Multiplayer">Multiplayer</button>
+                    </div>
+                </div>
+                <div class="filter-block price-box">
+                    <h3>Price</h3>
+                    <form class="price-form">
+                        <label><input type="checkbox" name="price" value="free"> Free</label>
+                        <label><input type="checkbox" name="price" value="under20"> $0 - $20</label>
+                        <label><input type="checkbox" name="price" value="over20"> $20+</label>
+                    </form>
+                </div>
+            </div>
+            <div class="cards-grid" id="cardsGrid"></div>
+        </div> 
+        <footer class="main-footer">
+    <div class="footer-brand">NEXUS</div>
+    
+    <div class="footer-text">
+        © 2026 NEXUS GAMING. ENGINEERED FOR PERFORMANCE.
+    </div>
+    
+    <div class="footer-links">
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">TERMS OF SERVICE</a>
+    </div>
+</footer>
+    </main>
+    
+</body>
+</html>
