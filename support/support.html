@@ -1,230 +1,294 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXUS Support</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css"/>
-
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        primary: "#8b5cf6",
-        background: "#020817",
-        surface: "#020817",
-        text: "#94a3b8"
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Support - NEXUS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-error": "#690005",
+          "surface-bright": "#2a3a4f",
+          "surface-tint": "#cfbcff",
+          "tertiary": "#e7c365",
+          "surface-dim": "#031427",
+          "tertiary-fixed-dim": "#e7c365",
+          "secondary-fixed-dim": "#cdc0e9",
+          "primary-fixed-dim": "#cfbcff",
+          "surface-container-highest": "#26364a",
+          "inverse-surface": "#d3e4fe",
+          "primary-fixed": "#e9ddff",
+          "on-background": "#d3e4fe",
+          "outline": "#948e9c",
+          "on-secondary-fixed-variant": "#4b4263",
+          "surface-container-lowest": "#000f21",
+          "surface": "#031427",
+          "on-primary": "#381e72",
+          "on-tertiary-fixed-variant": "#594400",
+          "tertiary-fixed": "#ffdf93",
+          "outline-variant": "#494551",
+          "on-tertiary-container": "#503d00",
+          "secondary-fixed": "#e9ddff",
+          "error": "#ffb4ab",
+          "on-secondary-container": "#bfb2da",
+          "surface-container-low": "#0b1c30",
+          "on-tertiary": "#3e2e00",
+          "on-primary-fixed": "#22005d",
+          "primary": "#cfbcff",
+          "on-surface": "#d3e4fe",
+          "inverse-on-surface": "#213145",
+          "on-error-container": "#ffdad6",
+          "secondary": "#cdc0e9",
+          "on-primary-fixed-variant": "#4f378a",
+          "surface-variant": "#26364a",
+          "error-container": "#93000a",
+          "surface-container-high": "#1b2b3f",
+          "surface-container": "#102034",
+          "tertiary-container": "#c9a74d",
+          "background": "#031427",
+          "secondary-container": "#4d4465",
+          "inverse-primary": "#6750a4",
+          "on-surface-variant": "#cbc4d2",
+          "on-secondary": "#342b4b",
+          "on-primary-container": "#e0d2ff",
+          "on-secondary-fixed": "#1f1635",
+          "on-tertiary-fixed": "#241a00",
+          "primary-container": "#6750a4"
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        spacing: {
+          "unit": "4px",
+          "container-max": "1440px",
+          "gutter": "24px",
+          "sidebar-width": "280px",
+          "margin-desktop": "40px",
+          "margin-mobile": "16px"
+        },
+        fontFamily: {
+          "h1": ["Space Grotesk"],
+          "label": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "h2": ["Space Grotesk"],
+          "display": ["Space Grotesk"],
+          "body-lg": ["Plus Jakarta Sans"]
+        },
+        fontSize: {
+          "h1": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+          "label": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+          "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+          "h2": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+          "display": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }]
+        }
       }
     }
   }
-}
 </script>
-
+<style>
+  .glass-panel {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+</style>
 </head>
 
-<body class="bg-background text-text flex min-h-screen">
+<body class="bg-background text-on-background font-body-md min-h-screen flex selection:bg-primary/30 selection:text-primary">
 
-<!-- Sidebar -->
-<div class="w-[280px] h-screen bg-[#020817] flex flex-col justify-between border-r border-white/10 p-5 fixed">
-
-  <!-- Top -->
-  <div>
-    <div class="flex justify-between items-center mb-10">
-      <div>
-        <h1 class="text-3xl font-bold text-violet-500">NEXUS</h1>
-        <p class="text-xs text-gray-500">ELITE TIER</p>
-      </div>
-      <div class="w-10 h-10 rounded-full border border-violet-500 flex items-center justify-center text-xs text-violet-400">
-        USER
-      </div>
+<!-- ═══════════ SIDEBAR ═══════════ -->
+<nav class="bg-white/80 dark:bg-slate-950/90 backdrop-blur-xl text-violet-600 dark:text-violet-500 font-space-grotesk uppercase tracking-widest text-xs fixed left-0 top-0 h-screen w-[280px] z-50 border-r border-black/5 dark:border-white/10 shadow-xl dark:shadow-none flex flex-col py-10 hidden md:flex group">
+  
+  <!-- Logo + Avatar -->
+  <div class="px-6 mb-8 flex items-center justify-between">
+    <div>
+      <div class="text-3xl font-black tracking-tighter text-violet-600 dark:text-violet-500 mb-2">NEXUS</div>
+      <div class="text-[10px] text-slate-500 dark:text-slate-400 tracking-wider">Elite Tier</div>
     </div>
+    <img alt="User Avatar"
+         class="w-10 h-10 rounded-full border border-violet-500/30 object-cover"
+         src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0n85mmNwXqHSkRLBp5rhPGTxJOB9mNC78u4oShWkLU3wFvnKVVqXQDfI6eSx61imgu436s3diH3JCjLcGMAQjYNKvyUCfPJo0G5jhQQP51ngX8KuTWUEyPdUhgVE40uG1ChDOHuN0ru5vbfGL9KwGeHz0j8W6eNGK_6dYs12lgMjYQGVH8pQC-Sd8cF0kKV4uEO6L-tyYOhFVwg0eJhvLn4U4tQdN_jXPqQ8FThZeNgi71C2Sdd1sQ-vxUr5zr2KL_mNHBRnbZM"/>
+  </div>
 
-    <div class="flex flex-col gap-2 text-sm">
-      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
-        <span class="material-symbols-outlined">home</span> HOME
+  <!-- Nav links -->
+  <div class="flex flex-col gap-2 flex-grow px-2">
+    <a class="text-slate-500 dark:text-slate-400 flex items-center px-6 py-4 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 hover:translate-x-1 rounded-r-lg" href="#">
+      <span class="material-symbols-outlined mr-4" data-icon="home">home</span>Home
+    </a>
+    <a class="text-slate-500 dark:text-slate-400 flex items-center px-6 py-4 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 hover:translate-x-1 rounded-r-lg" href="#">
+      <span class="material-symbols-outlined mr-4" data-icon="sports_esports">sports_esports</span>Library
+    </a>
+    <a class="text-slate-500 dark:text-slate-400 flex items-center px-6 py-4 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 hover:translate-x-1 rounded-r-lg" href="#">
+      <span class="material-symbols-outlined mr-4" data-icon="manage_search">manage_search</span>Search
+    </a>
+    <a class="text-slate-500 dark:text-slate-400 flex items-center px-6 py-4 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 hover:translate-x-1 rounded-r-lg" href="#">
+      <span class="material-symbols-outlined mr-4" data-icon="compare_arrows">compare_arrows</span>Compare
+    </a>
+    <a class="text-slate-500 dark:text-slate-400 flex items-center px-6 py-4 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 hover:translate-x-1 rounded-r-lg" href="#">
+      <span class="material-symbols-outlined mr-4" data-icon="person">person</span>Profile
+    </a>
+    <!-- Active: Support -->
+    <a class="bg-violet-600/10 dark:bg-violet-500/20 text-violet-600 dark:text-violet-400 border-l-4 border-violet-600 dark:border-violet-500 flex items-center px-6 py-4 hover:translate-x-1 transition-transform duration-300 rounded-r-lg" href="#">
+      <span class="material-symbols-outlined mr-4" data-icon="contact_support">contact_support</span>Support
+    </a>
+  </div>
+
+  <!-- Settings + Logout -->
+  <div class="px-6 mt-auto">
+    <div class="flex flex-col gap-2">
+      <a class="text-slate-500 dark:text-slate-400 flex items-center py-2 hover:text-violet-500 transition-colors duration-300 text-[10px]" href="#">
+        <span class="material-symbols-outlined mr-3 text-[16px]" data-icon="settings">settings</span>Settings
       </a>
-      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
-        <span class="material-symbols-outlined">sports_esports</span> LIBRARY
-      </a>
-      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
-        <span class="material-symbols-outlined">search</span> SEARCH
-      </a>
-      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
-        <span class="material-symbols-outlined">compare_arrows</span> COMPARE
-      </a>
-      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
-        <span class="material-symbols-outlined">person</span> PROFILE
-      </a>
-      <a class="flex items-center gap-4 px-4 py-3 rounded-lg bg-violet-500/20 text-violet-400 border-l-4 border-violet-500 cursor-pointer">
-        <span class="material-symbols-outlined">contact_support</span> SUPPORT
+      <a class="text-slate-500 dark:text-slate-400 flex items-center py-2 hover:text-violet-500 transition-colors duration-300 text-[10px]" href="#">
+        <span class="material-symbols-outlined mr-3 text-[16px]" data-icon="logout">logout</span>Logout
       </a>
     </div>
   </div>
+</nav>
 
-  <div class="flex flex-col gap-4 text-sm">
-    <a class="flex items-center gap-3 hover:text-violet-400 transition cursor-pointer">
-      <span class="material-symbols-outlined">settings</span> SETTINGS
-    </a>
-    <a class="flex items-center gap-3 hover:text-violet-400 transition cursor-pointer">
-      <span class="material-symbols-outlined">logout</span> LOGOUT
-    </a>
+<!-- ═══════════ MAIN CONTENT ═══════════ -->
+<main class="flex-1 ml-0 md:ml-[280px] min-h-screen flex flex-col relative overflow-hidden">
+
+  <!-- Ambient Glows -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+    <div class="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-primary/5 blur-[120px]"></div>
+    <div class="absolute bottom-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-secondary/5 blur-[100px]"></div>
   </div>
-</div>
 
-<!-- Main Content -->
-<div class="flex-1 ml-[280px] flex items-center justify-center p-8">
-
-  <div class="w-full max-w-2xl">
+  <div class="flex-1 w-full max-w-[1440px] mx-auto px-6 md:px-10 py-10 md:py-16 relative z-10 flex flex-col justify-center">
 
     <!-- Header -->
-    <div class="fade-up mb-8">
-      <div class="flex items-center gap-3 mb-2">
-        <div class="status-dot"></div>
-        <span class="mono text-xs text-emerald-400 tracking-widest">SUPPORT ONLINE</span>
+    <header class="mb-12 md:mb-20 max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6 text-primary font-label text-label">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        SECURE COMMS
       </div>
-      <h2 class="text-4xl font-bold text-white tracking-tight">Contact <span class="text-violet-400">Support</span></h2>
-      <p class="text-sm text-slate-500 mt-2 mono">Average response time: &lt; 2 hours</p>
+      <h1 class="font-display text-display text-on-background mb-4">INITIALIZE CONTACT.</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">Our support operatives are standing by. Transmit your inquiry below for priority routing through the Nexus network.</p>
+    </header>
+
+    <!-- Form + Info Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-7 bg-surface-container/40 border border-white/10 rounded-xl glass-panel p-8 relative overflow-hidden group">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-primary/5 to-transparent"></div>
+        <form class="flex flex-col gap-6 relative z-10">
+
+          <!-- Row 1: Name + Email -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2">
+              <label class="font-label text-label text-on-surface-variant" for="callsign">CALLSIGN / NAME</label>
+              <input class="bg-surface-container-low border-b border-white/10 focus:border-primary focus:bg-surface-container outline-none transition-all duration-300 py-3 px-4 text-on-background font-body-md placeholder-on-surface-variant/50 rounded-t-DEFAULT hover:border-white/20"
+                     id="callsign" placeholder="Enter identification" type="text"/>
+              <span class="field-error hidden items-center gap-1 text-error font-label mt-1" id="callsign-err" style="font-size:11px;">
+                <span class="material-symbols-outlined" style="font-size:13px;">error</span>&nbsp;CALLSIGN REQUIRED — IDENTITY UNVERIFIED
+              </span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="font-label text-label text-on-surface-variant" for="commlink">COMM LINK / EMAIL</label>
+              <input class="bg-surface-container-low border-b border-white/10 focus:border-primary focus:bg-surface-container outline-none transition-all duration-300 py-3 px-4 text-on-background font-body-md placeholder-on-surface-variant/50 rounded-t-DEFAULT hover:border-white/20"
+                     id="commlink" placeholder="transmission@address.net" type="email"/>
+              <span class="field-error hidden items-center gap-1 text-error font-label mt-1" id="commlink-err" style="font-size:11px;">
+                <span class="material-symbols-outlined" style="font-size:13px;">error</span>&nbsp;<span id="commlink-err-text">COMM LINK REQUIRED — SIGNAL LOST</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Routing Category -->
+          <div class="flex flex-col gap-2">
+            <label class="font-label text-label text-on-surface-variant" for="category">ROUTING CATEGORY</label>
+            <div class="relative">
+              <select class="appearance-none w-full bg-surface-container-low border-b border-white/10 focus:border-primary focus:bg-surface-container outline-none transition-all duration-300 py-3 px-4 text-on-background font-body-md rounded-t-DEFAULT hover:border-white/20 cursor-pointer" id="category">
+                <option class="bg-surface-container" disabled selected value="">Select routing vector</option>
+                <option class="bg-surface-container" value="tech">Technical Support</option>
+                <option class="bg-surface-container" value="billing">Account &amp; Billing</option>
+                <option class="bg-surface-container" value="report">Report Anomaly</option>
+                <option class="bg-surface-container" value="general">General Inquiry</option>
+              </select>
+              <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+            </div>
+            <span class="field-error hidden items-center gap-1 text-error font-label mt-1" id="category-err" style="font-size:11px;">
+              <span class="material-symbols-outlined" style="font-size:13px;">error</span>&nbsp;ROUTING VECTOR NOT SELECTED — PACKET UNROUTABLE
+            </span>
+          </div>
+
+          <!-- Data Packet -->
+          <div class="flex flex-col gap-2">
+            <label class="font-label text-label text-on-surface-variant" for="message">DATA PACKET</label>
+            <textarea class="bg-surface-container-low border-b border-white/10 focus:border-primary focus:bg-surface-container outline-none transition-all duration-300 py-3 px-4 text-on-background font-body-md placeholder-on-surface-variant/50 rounded-t-DEFAULT resize-none hover:border-white/20"
+                      id="message" placeholder="Detail your transmission here..." rows="5"></textarea>
+            <span class="field-error hidden items-center gap-1 text-error font-label mt-1" id="message-err" style="font-size:11px;">
+              <span class="material-symbols-outlined" style="font-size:13px;">error</span>&nbsp;DATA PACKET EMPTY — NOTHING TO TRANSMIT
+            </span>
+          </div>
+
+          <!-- Checkbox + Submit -->
+          <div class="pt-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <input class="w-5 h-5 bg-surface-container-low border-white/20 rounded text-primary focus:ring-primary focus:ring-offset-background cursor-pointer"
+                     id="urgent" type="checkbox"/>
+              <label class="font-body-md text-sm text-on-surface-variant cursor-pointer" for="urgent">Flag as urgent priority</label>
+            </div>
+            <button class="bg-primary text-on-primary font-label text-label py-3 px-8 rounded-lg hover:tracking-[0.1em] transition-all duration-300 flex items-center gap-2 shadow-[0_0_15px_rgba(207,188,255,0.2)] hover:shadow-[0_0_25px_rgba(207,188,255,0.4)]"
+                    id="transmitBtn" type="button">
+              TRANSMIT
+              <span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Right: Direct Channels + HQ Map -->
+      <div class="lg:col-span-5 flex flex-col gap-8">
+
+        <!-- Direct Channels Card -->
+        <div class="bg-surface-container/30 border border-white/5 rounded-xl glass-panel p-6 flex flex-col gap-6">
+          <h3 class="font-h2 text-h2 text-on-background">DIRECT CHANNELS</h3>
+          <div class="flex flex-col gap-4">
+            <a class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low/50 hover:bg-surface-container border border-transparent hover:border-white/10 transition-all duration-300 group" href="#">
+              <div class="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
+                <span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+              </div>
+              <div>
+                <div class="font-label text-label text-on-background mb-1">LIVE COMM-LINK</div>
+                <div class="font-body-md text-sm text-on-surface-variant">Available 24/7 for Elite Tier operatives.</div>
+              </div>
+            </a>
+            <a class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low/50 hover:bg-surface-container border border-transparent hover:border-white/10 transition-all duration-300 group" href="#">
+              <div class="p-2 rounded-lg bg-secondary/10 text-secondary group-hover:scale-110 transition-transform duration-300">
+                <span class="material-symbols-outlined" data-icon="forum">forum</span>
+              </div>
+              <div>
+                <div class="font-label text-label text-on-background mb-1">COMMUNITY FORUMS</div>
+                <div class="font-body-md text-sm text-on-surface-variant">Access the collective knowledge base.</div>
+              </div>
+            </a>
+          </div>
+        </div>
+  <!-- Footer -->
+  <footer class="bg-slate-50 dark:bg-slate-950 text-violet-600 dark:text-violet-500 font-space-grotesk text-sm uppercase tracking-widest w-full py-12 border-t border-black/5 dark:border-white/10 mt-auto relative z-20">
+    <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1440px] mx-auto gap-6">
+      <div class="text-xl font-bold text-slate-900 dark:text-white">NEXUS</div>
+      <div class="text-slate-500 dark:text-slate-500 text-xs">© 2024 NEXUS GAMING. ENGINEERED FOR PERFORMANCE.</div>
+      <div class="flex gap-6">
+        <a class="text-slate-500 dark:text-slate-500 hover:text-violet-600 transition-colors hover:opacity-80 transition-opacity duration-300" href="#">Privacy Policy</a>
+        <a class="text-slate-500 dark:text-slate-500 hover:text-violet-600 transition-colors hover:opacity-80 transition-opacity duration-300" href="#">Terms of Service</a>
+        <a class="text-slate-500 dark:text-slate-500 hover:text-violet-600 transition-colors hover:opacity-80 transition-opacity duration-300" href="#">Cookie Settings</a>
+      </div>
     </div>
+  </footer>
 
-    <div class="grid grid-cols-3 gap-3 mb-6 fade-up delay-1">
-      <div class="info-card">
-        <span class="material-symbols-outlined text-violet-400 text-lg">bolt</span>
-        <p class="mono text-xs text-slate-400 mt-1">FAST RESPONSE</p>
-        <p class="text-white text-sm font-semibold mt-0.5">Elite Priority</p>
-      </div>
-      <div class="info-card">
-        <span class="material-symbols-outlined text-violet-400 text-lg">support_agent</span>
-        <p class="mono text-xs text-slate-400 mt-1">DEDICATED</p>
-        <p class="text-white text-sm font-semibold mt-0.5">Expert Team</p>
-      </div>
-      <div class="info-card">
-        <span class="material-symbols-outlined text-violet-400 text-lg">schedule</span>
-        <p class="mono text-xs text-slate-400 mt-1">AVAILABILITY</p>
-        <p class="text-white text-sm font-semibold mt-0.5">24 / 7</p>
-      </div>
-    </div>
-
-    <!-- Form Card -->
-    <div class="support-card rounded-xl p-8 fade-up delay-2" style="position:relative;">
-      <div class="corner-tl"></div>
-      <div class="corner-br"></div>
-
-      <!-- Success overlay -->
-      <div class="success-overlay rounded-xl" id="successOverlay">
-        <div class="success-icon">
-          <span class="material-symbols-outlined text-violet-400 text-2xl">check</span>
-        </div>
-        <p class="mono text-xs tracking-widest text-violet-400">MESSAGE SENT</p>
-        <p class="text-white text-sm">Our team will get back to you shortly.</p>
-        <button onclick="resetForm()" class="mt-3 mono text-xs text-slate-500 hover:text-violet-400 transition tracking-widest">
-          ← SEND ANOTHER
-        </button>
-      </div>
-
-      <div class="grid grid-cols-2 gap-5 mb-5">
-        <div>
-          <label class="field-label">// NAME</label>
-          <input id="name" type="text" placeholder="John Doe"
-            class="nexus-input w-full p-3 rounded-lg">
-        </div>
-        <div>
-          <label class="field-label">// EMAIL</label>
-          <input id="email" type="email" placeholder="you@example.com"
-            class="nexus-input w-full p-3 rounded-lg">
-        </div>
-      </div>
-
-      <div class="mb-5">
-        <label class="field-label">// SUBJECT</label>
-        <div class="flex gap-2 flex-wrap">
-          <button onclick="setSubject(this)" class="subject-btn mono text-xs px-3 py-1.5 rounded border border-white/10 text-slate-400 hover:border-violet-500/50 hover:text-violet-400 transition">BILLING</button>
-          <button onclick="setSubject(this)" class="subject-btn mono text-xs px-3 py-1.5 rounded border border-white/10 text-slate-400 hover:border-violet-500/50 hover:text-violet-400 transition">TECHNICAL</button>
-          <button onclick="setSubject(this)" class="subject-btn mono text-xs px-3 py-1.5 rounded border border-white/10 text-slate-400 hover:border-violet-500/50 hover:text-violet-400 transition">ACCOUNT</button>
-          <button onclick="setSubject(this)" class="subject-btn mono text-xs px-3 py-1.5 rounded border border-white/10 text-slate-400 hover:border-violet-500/50 hover:text-violet-400 transition">OTHER</button>
-        </div>
-        <input id="subject" type="hidden" value="">
-      </div>
-
-      <div class="mb-6">
-        <label class="field-label">// MESSAGE</label>
-        <textarea id="message" placeholder="Describe your issue in detail..."
-          class="nexus-input w-full p-3 rounded-lg resize-none" rows="5"></textarea>
-        <div class="flex justify-between mt-1">
-          <span class="mono text-xs text-slate-600">BE AS DETAILED AS POSSIBLE</span>
-          <span class="mono text-xs text-slate-600" id="charCount">0 / 500</span>
-        </div>
-      </div>
-
-      <button onclick="sendForm()" class="nexus-btn w-full text-white py-3 rounded-lg font-semibold tracking-widest">
-        SEND MESSAGE →
-      </button>
-
-    </div>
-
-  </div>
-</div>
-
-<script>
-  // Char counter
-  const msg = document.getElementById('message');
-  const counter = document.getElementById('charCount');
-  msg.addEventListener('input', () => {
-    const len = Math.min(msg.value.length, 500);
-    counter.textContent = `${len} / 500`;
-    if (len >= 500) msg.value = msg.value.substring(0, 500);
-  });
-
-  // Subject pills
-  let selectedSubject = '';
-  function setSubject(btn) {
-    document.querySelectorAll('.subject-btn').forEach(b => {
-      b.classList.remove('border-violet-500', 'text-violet-400', 'bg-violet-500/10');
-      b.classList.add('border-white/10', 'text-slate-400');
-    });
-    btn.classList.add('border-violet-500', 'text-violet-400', 'bg-violet-500/10');
-    btn.classList.remove('border-white/10', 'text-slate-400');
-    selectedSubject = btn.textContent;
-    document.getElementById('subject').value = selectedSubject;
-  }
-
-  function sendForm() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !email || !message) {
-      [name ? null : 'name', email ? null : 'email', message ? null : 'message'].forEach(id => {
-        if (!id) return;
-        const el = document.getElementById(id);
-        el.style.borderColor = 'rgba(239,68,68,0.6)';
-        el.style.animation = 'none';
-        setTimeout(() => { el.style.borderColor = ''; }, 2000);
-      });
-      return;
-    }
-
-    document.getElementById('successOverlay').classList.add('show');
-  }
-
-  function resetForm() {
-    document.getElementById('successOverlay').classList.remove('show');
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('message').value = '';
-    counter.textContent = '0 / 500';
-    document.querySelectorAll('.subject-btn').forEach(b => {
-      b.classList.remove('border-violet-500', 'text-violet-400', 'bg-violet-500/10');
-      b.classList.add('border-white/10', 'text-slate-400');
-    });
-    selectedSubject = '';
-  }
-</script>
-
+</main>
+<script src="support.js"></script>
 </body>
 </html>
