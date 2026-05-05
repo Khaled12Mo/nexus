@@ -1,0 +1,76 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #002552;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+body{
+    background-color: #001f48;
+    font-family: Arial, sans-serif;
+
+}
+ .title{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.inbox{
+    padding: 40px;
+    width: 50%;
+    margin: 20px auto;
+    
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    margin-bottom: 30px; 
+}
+
+
+a{
+    text-decoration: none; /* to remove the underline from the link */
+    color: rgb(184, 217, 255); /* to change the color of the link */
+}
+
+button[type="submit"]{
+    background-color: rgb(173, 57, 250);
+    color: white;
+    padding: 10px 20px; /* it will give space inside the button */
+    border: none; /* to remove the border from the button */
+    border-radius: 5px; /* it will smooth the corners of the button */
+    cursor: pointer; /* to change the cursor when hovering over the button */
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 12px;
+
+}
+
+button[type="submit"]:hover{
+    background-color: rgb(231, 135, 255); /* to change the background color of the button when hovering */
+}
+
+input[type="text"], input[type="password"], input[type="email"]{
+    background-color: #002f6c;
+    color: white;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="password"], input[type="email"]{
+    background-color: #002f6c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
