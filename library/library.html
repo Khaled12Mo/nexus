@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="Style_LIBRARY.css">
+    <link rel="stylesheet" href="Style_Game_details.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="icon" type="image/x-icon" href="../home/favicon.ico">
 </head>
 
 <body>
 
-<div class="sidebar">
-    <a href="../home/index.html" class="nexus">NEXUS</a>
-    <ul class="nav-list">
-        
-            <li><a href="#" class="nav-item-active">Library</a></li>
-    </ul>
-</div>
+    <nav class="sidebar">
+        <div>
+            <h1 ><a class="nexus" href="../home/index.html">NEXUS</a></h1>
+        </div>
+        <ul class="nav-list">
+            <li><a class="nav-item" href="../home/index.html"><i class="bi bi-house-door"></i>HOME</a></li>
+            <li><a class="nav-item-active" href="../library/library.html"><i class="bi bi-controller"></i>LIBRARY</a></li>
+            <li><a class="nav-item" href="../search/search.html"><i class="bi bi-search"></i>SEARCH</a></li>
+            <li><a class="nav-item" href="../compare/index.html"><i class="bi bi-arrow-left-right"></i>COMPARE</a></li>
+            <li><a class="nav-item" href="../profile/profile.html"><i class="bi bi-person"></i>PROFILE</a></li>
+            <li><a class="nav-item" href="../support/support.html"><i class="bi bi-headset"></i>SUPPORT</a></li>
+        </ul>
+        <ul class="nav-settings">
+            <li><a class="nav-item" href="../settings/index.html"><i class="bi bi-gear"></i>SETTINGS</a></li>
+        </ul>
+    </nav>
 
 
 <div class="main-wrapper">
@@ -34,59 +47,30 @@
 
 
     <div class="grid">
-
-    <div class="item rpg">
-    <img src="https://img.redbull.com/images/q_auto,f_auto/redbullcom/2021/1/5/ivtoxsfd6ii8zhn2geuf/cyber-punk-johny-and-v">
-    <h3>Cyberpunk 2077</h3>
-    </div>
-
-    <div class="item strategy">
-    <img src="https://thebetanetwork.net/wp-content/uploads/2023/09/Starfield-Article-Image.png">
-    <h3>Starfield</h3>
-    </div>
-
-    <div class="item rpg">
-    <img src="https://upload.wikimedia.org/wikipedia/ar/1/16/%D8%BA%D9%84%D8%A7%D9%81_%D9%84%D8%B9%D8%A8%D8%A9_%D8%A5%D9%8A%D9%84%D8%AF%D9%86_%D8%B1%D9%8A%D9%86%D8%AC.jpeg">
-    <h3>Elden Ring</h3>
-    </div>
-
-    <div class="item shooter">
-    <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2026/01/Valorant-2026-Season-Poster.jpg">
-    <h3>Valorant</h3>
-    </div>
-
-    <div class="item shooter">
-    <img src="https://www.true-gaming.net/home/wp-content/uploads/2015/06/1433877248-call-of-duty-black-ops-iii-key-art.jpg">
-    <h3>Call of Duty</h3>
-    </div>
-
-    <div class="item rpg">
-    <img src="https://wallpapers.com/images/featured-full/witcher-3-iphone-2r4ch5kchsqypx8x.jpg">
-    <h3>The Witcher 3</h3>
-    </div>
-
-    <div class="item strategy">
-    <img src="https://arabgamerz.com/wp-content/uploads/2024/01/%D8%B5%D9%88%D8%B1-%D8%B4%D8%AE%D8%B5%D9%8A%D8%A7%D8%AA-%D9%85%D8%A7%D9%8A%D9%86-%D9%83%D8%B1%D8%A7%D9%81%D8%AA3.jpg">
-    <h3>Minecraft</h3>
-    </div>
-
-    <div class="item shooter">
-    <img src="https://wallpapers.com/images/featured-full/overwatch-2-p5y4rizmop18x8th.jpg">
-    <h3>Overwatch 2</h3>
-    </div>
-
+    <!-- Games will be loaded here dynamically from gamesData.js -->
     </div>
 
     </div>
 
 
     <footer class="main-footer">
-        <div class="footer-brand">NEXUS</div>
-    </footer>
+    <div class="footer-brand">NEXUS</div>
+    
+    <div class="footer-text">
+        © 2026 NEXUS GAMING. ENGINEERED FOR PERFORMANCE.
+    </div>
+    
+    <div class="footer-links">
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">TERMS OF SERVICE</a>
+    </div>
+</footer>
 
 </div>
 
 <script src="library.js"></script>
+<script src="gamesData.js"></script>
+<script src="Game_details.js"></script>
 
 </body>
 </html>
