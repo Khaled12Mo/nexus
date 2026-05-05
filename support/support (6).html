@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS Support</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#8b5cf6",
+        background: "#020817",
+        surface: "#020817",
+        text: "#94a3b8"
+      }
+    }
+  }
+}
+</script>
+
+</head>
+
+<body class="bg-background text-text flex min-h-screen">
+
+<!-- Sidebar -->
+<div class="w-[280px] h-screen bg-[#020817] flex flex-col justify-between border-r border-white/10 p-5 fixed">
+
+  <!-- Top -->
+  <div>
+    <div class="flex justify-between items-center mb-10">
+      <div>
+        <h1 class="text-3xl font-bold text-violet-500">NEXUS</h1>
+        <p class="text-xs text-gray-500">ELITE TIER</p>
+      </div>
+      <div class="w-10 h-10 rounded-full border border-violet-500 flex items-center justify-center text-xs text-violet-400">
+        USER
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2 text-sm">
+      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
+        <span class="material-symbols-outlined">home</span> HOME
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
+        <span class="material-symbols-outlined">sports_esports</span> LIBRARY
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
+        <span class="material-symbols-outlined">search</span> SEARCH
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
+        <span class="material-symbols-outlined">compare_arrows</span> COMPARE
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
+        <span class="material-symbols-outlined">person</span> PROFILE
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 rounded-lg bg-violet-500/20 text-violet-400 border-l-4 border-violet-500 cursor-pointer">
+        <span class="material-symbols-outlined">contact_support</span> SUPPORT
+      </a>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-4 text-sm">
+    <a class="flex items-center gap-3 hover:text-violet-400 transition cursor-pointer">
+      <span class="material-symbols-outlined">settings</span> SETTINGS
+    </a>
+    <a class="flex items-center gap-3 hover:text-violet-400 transition cursor-pointer">
+      <span class="material-symbols-outlined">logout</span> LOGOUT
+    </a>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="flex-1 ml-[280px] flex items-center justify-center p-8">
+
+  <div class="w-full max-w-2xl">
+
+    <!-- Header -->
+    <div class="fade-up mb-8">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="status-dot"></div>
+        <span class="mono text-xs text-emerald-400 tracking-widest">SUPPORT ONLINE</span>
+      </div>
+      <h2 class="text-4xl font-bold text-white tracking-tight">Contact <span class="text-violet-400">Support</span></h2>
+      <p class="text-sm text-slate-500 mt-2 mono">Average response time: &lt; 2 hours</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3 mb-6 fade-up delay-1">
+      <div class="info-card">
+        <span class="material-symbols-outlined text-violet-400 text-lg">bolt</span>
+        <p class="mono text-xs text-slate-400 mt-1">FAST RESPONSE</p>
+        <p class="text-white text-sm font-semibold mt-0.5">Elite Priority</p>
+      </div>
+      <div class="info-card">
+        <span class="material-symbols-outlined text-violet-400 text-lg">support_agent</span>
+        <p class="mono text-xs text-slate-400 mt-1">DEDICATED</p>
+        <p class="text-white text-sm font-semibold mt-0.5">Expert Team</p>
+      </div>
+      <div class="info-card">
+        <span class="material-symbols-outlined text-violet-400 text-lg">schedule</span>
+        <p class="mono text-xs text-slate-400 mt-1">AVAILABILITY</p>
+        <p class="text-white text-sm font-semibold mt-0.5">24 / 7</p>
+      </div>
+    </div>
+
+    <!-- Form Card -->
+    <div class="support-card rounded-xl p-8 fade-up delay-2" style="position:relative;">
+      <div class="corner-tl"></div>
+      <div class="corner-br"></div>
+
+      <!-- Success overlay -->
+      <div class="success-overlay rounded-xl" id="successOverlay">
+        <div class="success-icon">
+          <span class="material-symbols-outlined text-violet-400 text-2xl">check</span>
+        </div>
+        <p class="mono text-xs tracking-widest text-violet-400">MESSAGE SENT</p>
+        <p class="text-white text-sm">Our team will get back to you shortly.</p>
+        <button onclick="resetForm()" class="mt-3 mono text-xs text-slate-500 hover:text-violet-400 transition tracking-widest">
+          ← SEND ANOTHER
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 gap-5 mb-5">
+        <div>
+          <label class="field-label">// NAME</label>
+          <input id="name" type="text" placeholder="John Doe"
+            class="nexus-input w-full p-3 rounded-lg">
+        </div>
+        <div>
+          <label class="field-label">// EMAIL</label>
+          <input id="email" type="email" placeholder="you@example.com"
+            class="nexus-input w-full p-3 rounded-lg">
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label class="field-label">// SUBJECT</label>
+        <div class="flex gap-2 flex-wrap">
+          <button onclick="setSubject(this)" class="subject-btn mono text-xs px-3 py-1.5 rounded border border-white/10 text-slate-400 hover:border-violet-500/50 hover:text-violet-400 transition">BILLING</button>
+          <button onclick="setSubject(this)" class="subject-btn mono text-xs px-3 py-1.5 rounded border border-white/10 text-slate-400 hover:border-violet-500/50 hover:text-violet-400 transition">TECHNICAL</button>
+          <button onclick="setSubject(this)" class="subject-btn mono text-xs px-3 py-1.5 rounded border border-white/10 text-slate-400 hover:border-violet-500/50 hover:text-violet-400 transition">ACCOUNT</button>
+          <button onclick="setSubject(this)" class="subject-btn mono text-xs px-3 py-1.5 rounded border border-white/10 text-slate-400 hover:border-violet-500/50 hover:text-violet-400 transition">OTHER</button>
+        </div>
+        <input id="subject" type="hidden" value="">
+      </div>
+
+      <div class="mb-6">
+        <label class="field-label">// MESSAGE</label>
+        <textarea id="message" placeholder="Describe your issue in detail..."
+          class="nexus-input w-full p-3 rounded-lg resize-none" rows="5"></textarea>
+        <div class="flex justify-between mt-1">
+          <span class="mono text-xs text-slate-600">BE AS DETAILED AS POSSIBLE</span>
+          <span class="mono text-xs text-slate-600" id="charCount">0 / 500</span>
+        </div>
+      </div>
+
+      <button onclick="sendForm()" class="nexus-btn w-full text-white py-3 rounded-lg font-semibold tracking-widest">
+        SEND MESSAGE →
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Char counter
+  const msg = document.getElementById('message');
+  const counter = document.getElementById('charCount');
+  msg.addEventListener('input', () => {
+    const len = Math.min(msg.value.length, 500);
+    counter.textContent = `${len} / 500`;
+    if (len >= 500) msg.value = msg.value.substring(0, 500);
+  });
+
+  // Subject pills
+  let selectedSubject = '';
+  function setSubject(btn) {
+    document.querySelectorAll('.subject-btn').forEach(b => {
+      b.classList.remove('border-violet-500', 'text-violet-400', 'bg-violet-500/10');
+      b.classList.add('border-white/10', 'text-slate-400');
+    });
+    btn.classList.add('border-violet-500', 'text-violet-400', 'bg-violet-500/10');
+    btn.classList.remove('border-white/10', 'text-slate-400');
+    selectedSubject = btn.textContent;
+    document.getElementById('subject').value = selectedSubject;
+  }
+
+  function sendForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      [name ? null : 'name', email ? null : 'email', message ? null : 'message'].forEach(id => {
+        if (!id) return;
+        const el = document.getElementById(id);
+        el.style.borderColor = 'rgba(239,68,68,0.6)';
+        el.style.animation = 'none';
+        setTimeout(() => { el.style.borderColor = ''; }, 2000);
+      });
+      return;
+    }
+
+    document.getElementById('successOverlay').classList.add('show');
+  }
+
+  function resetForm() {
+    document.getElementById('successOverlay').classList.remove('show');
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+    counter.textContent = '0 / 500';
+    document.querySelectorAll('.subject-btn').forEach(b => {
+      b.classList.remove('border-violet-500', 'text-violet-400', 'bg-violet-500/10');
+      b.classList.add('border-white/10', 'text-slate-400');
+    });
+    selectedSubject = '';
+  }
+</script>
+
+</body>
+</html>
