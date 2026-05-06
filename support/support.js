@@ -1,10 +1,5 @@
-/* ══════════════════════════════════════
-   NEXUS — SUPPORT PAGE SCRIPT
-   ══════════════════════════════════════ */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── Menu Toggle (sidebar) ──
   const menuBtn  = document.getElementById('menuBtn');
   const sidebar  = document.getElementById('sidebar');
   const containt = document.getElementById('containt');
@@ -16,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Theme Toggle ──
   const themeBtn = document.getElementById('themeBtn');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
@@ -25,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Transmit Button ──
   const btn = document.getElementById('transmitBtn');
   if (btn) {
     btn.addEventListener('click', () => {
@@ -57,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Toast ──
   function showToast(text, type) {
     const old = document.querySelector('.nexus-toast');
     if (old) old.remove();
