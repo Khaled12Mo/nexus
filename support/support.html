@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — NEXUS</title>
+  <link rel="stylesheet" href="support.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar">
+    <a class="nexus" href="#">NEXUS</a>
+    <ul class="nav-list">
+      <li><a class="nav-item" href="#"><i class="mat-icon">home</i>Home</a></li>
+      <li><a class="nav-item" href="#"><i class="mat-icon">sports_esports</i>Library</a></li>
+      <li><a class="nav-item" href="#"><i class="mat-icon">manage_search</i>Search</a></li>
+      <li><a class="nav-item" href="#"><i class="mat-icon">compare_arrows</i>Compare</a></li>
+      <li><a class="nav-item" href="#"><i class="mat-icon">person</i>Profile</a></li>
+      <li><a class="nav-item-active" href="#"><i class="mat-icon">support_agent</i>Support</a></li>
+    </ul>
+    <ul class="nav-settings">
+      <li><a class="nav-item" href="#"><i class="mat-icon">login</i>Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="containt" id="containt">
+
+    <div class="top">
+      <button class="menu" id="menuBtn">&#9776;</button>
+      <button class="theme" id="themeBtn">&#9728;&#65039;</button>
+    </div>
+
+    <header>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        SECURE COMMS
+      </div>
+      <h1>INITIALIZE CONTACT.</h1>
+      <p>Our support operatives are standing by. Transmit your inquiry for priority routing.</p>
+    </header>
+
+    <div class="form-area">
+
+      <div class="form-card">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="callsign">CALLSIGN / NAME</label>
+            <input id="callsign" type="text" placeholder="Enter identification" />
+          </div>
+          <div class="form-group">
+            <label for="commlink">COMM LINK / EMAIL</label>
+            <input id="commlink" type="email" placeholder="transmission@address.net" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="category">ROUTING CATEGORY</label>
+          <select id="category">
+            <option disabled selected value="">Select routing vector</option>
+            <option value="Report Anomaly">Report Anomaly</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Technical Support">Technical Support</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">DATA PACKET</label>
+          <textarea id="message" rows="5" placeholder="Detail your transmission here..."></textarea>
+        </div>
+        <div class="form-footer">
+          <div class="checkbox-group">
+            <input id="urgent" type="checkbox" />
+            <label for="urgent">Flag as urgent priority</label>
+          </div>
+          <button class="btn-transmit" id="transmitBtn" type="button">
+            TRANSMIT <span class="mat-icon">send</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>DIRECT CHANNELS</h3>
+        <a class="channel-item" href="#">
+          <div class="channel-icon icon-primary"><span class="mat-icon">support_agent</span></div>
+          <div>
+            <div class="channel-label">LIVE COMM-LINK</div>
+            <div class="channel-desc">Available 24/7 for Elite Tier operatives.</div>
+          </div>
+        </a>
+        <a class="channel-item" href="#">
+          <div class="channel-icon icon-secondary"><span class="mat-icon">forum</span></div>
+          <div>
+            <div class="channel-label">COMMUNITY FORUMS</div>
+            <div class="channel-desc">Access the collective knowledge base.</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="support.js"></script>
+</body>
+</html>
