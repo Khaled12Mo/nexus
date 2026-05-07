@@ -292,16 +292,12 @@ ul.nav-settings{
     font-family: 'Inter', sans-serif;
     font-size: 25px;
     font-weight: 500;
-    /* margin-left: 33px; */
     margin-left: auto;
 }
 .player-stats-card{
     border: 1px solid #1e2d3d;
     border-radius: 12px;
     background-color: #031427;
-    /* width: 27%; */
-    /* margin-left:2% ; */
-    /* float: right; */
     padding: 10px 25px 10px 25px;
 }
 .player-stats-card h3{
@@ -338,10 +334,6 @@ ul.nav-settings{
     font-weight: 500;
     font-size: 20px;
     margin-top: -4px;
-    /* margin-bottom: 1px; */
-    /* position: relative;
-    left:53px;
-    top: 33px */
 }
 .stat-label{
     color: #beb8c6;
@@ -483,14 +475,13 @@ ul.nav-settings{
 }
 .active-slide{
 cursor: pointer;
+    cursor: pointer;
     filter: brightness(1.2) !important;
-    
-    transition: all 0.3s ease; 
-    border: 2px solid #4a00e0;
-    
-    
+    transform: scale(1.05) ;
 }
-/* الوضع الفاتح (Light Mode)  */
+
+/*Light Mode*/
+
 body.light .main-wrapper {
     background-color: #f0f2f5;
 }
@@ -520,8 +511,6 @@ body.light a.nav-item-active:visited {
 body.light .nav-settings{
     border-top: 1px solid #ddd;
 }
-
-
 body.light .main-footer {
     background-color: #ffffff;
     border-top: 1px solid #ddd;
@@ -533,8 +522,6 @@ body.light .footer-text,
 body.light .footer-links a {
     color: #666;
 }
-
-
 body.light .player-stats-card,
 body.light .about-game-container,
 body.light .requirements-card,
@@ -591,24 +578,17 @@ body.light .star {
 body.light .player-count {
     color: #4a00e0;
 }
-
-
 body.light .photo img,
 body.light .photo video {
     filter: brightness(0.8); 
 }
 body.light .active-slide {
-    filter: brightness(1.2) !important;
-    
+     filter: brightness(1.2) !important;
     transition: all 0.3s ease; 
-    border: 2px solid #4a00e0;
 }
 body.light .main-slide {
     border-radius: 12px;
 }
-
-
-
 body.light .image-game::after {
     background: linear-gradient(to bottom, rgba(240,242,245,0) 0%, #f0f2f5 100%);
 }
