@@ -73,7 +73,7 @@ const games = [
     price: "$49.99",
     about: "Night City, 2077. You are V, a mercenary outlaw caught in a war between corporate giants and gang legends. After a heist gone wrong, a prototype chip containing the digital ghost of rebel Johnny Silverhand is locked in your head, slowly erasing your mind. To survive, you must fight through the neon-drenched streets of the world’s most dangerous megalopolis. Cyberpunk 2077 is an open-world RPG where your choices shape the story. Enhance your body with lethal cyberware, master the art of hacking, and build your reputation in a city obsessed with power and modification. The experience is now complete with the 2.0 Update, featuring overhauled combat, new skill trees, and a revamped police system.",
     mainImage: "https://4kwallpapers.com/images/wallpapers/cyberpunk-2077-2560x1080-20154.jpg",
-    trailer: "Video/Cyberpunk 2077/WhatsApp Video 2026-05-05 at 8.47.37 PM.mp4",
+    trailer: "library/Video/Cyberpunk 2077/WhatsApp Video 2026-05-05 at 8.47.37 PM.mp4",
     screenshots: [
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_2f649b68d579bf87011487d29bc4ccbfdd97d34f.1920x1080.jpg",
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_0e64170751e1ae20ff8fdb7001a8892fd48260e7.1920x1080.jpg",
@@ -201,9 +201,9 @@ const games = [
     releaseDate: "Oct 26, 2018",
     studio: "Rockstar Games",
     price: "$59.99",
-    about: "America, 1899. Arthur Morgan and the Van der Linde Gang are outlaws on the run... Winner of over 175 Game of the Year Awards, Red Dead Redemption 2 is an epic tale of honor and loyalty at the dawn of the modern age.",
+    about: "America , 1899. Arthur Morgan and the Van der Linde Gang are outlaws on the run... Winner of over 175 Game of the Year Awards, Red Dead Redemption 2 is an epic tale of honor and loyalty at the dawn of the modern age.",
     mainImage: "749807.png",
-    trailer: "Video/Red Dead 2/Red Dead Redemption 2 Trailer.mp4",
+    trailer: "library/Video/Red Dead 2/Red Dead Redemption 2 Trailer.mp4",
     screenshots: [
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/ss_66b553f4c209476d3e4ce25fa4714002cc914c4f.1920x1080.jpg",
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/ss_bac60bacbf5da8945103648c08d27d5e202444ca.1920x1080.jpg",

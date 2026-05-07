@@ -446,8 +446,6 @@ ul.nav-settings{
     margin: 0;
 }
 .galary{
- 
-   
     display: flex;
     align-items: center;
     
@@ -474,7 +472,6 @@ ul.nav-settings{
     
 }
 .active-slide{
-cursor: pointer;
     cursor: pointer;
     filter: brightness(1.2) !important;
     transform: scale(1.05) ;
