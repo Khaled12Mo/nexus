@@ -169,19 +169,22 @@ ul.nav-settings{
 /* main */
 
 .content-area {
-padding-left: 20px;
+padding: 20px;
+padding-left: 22px;
 }
 
 .title {
 font-size: 42px;
 margin-bottom: 5px;
-color: white;
+color: #d3e4fe;
 font-family: 'Space Grotesk', sans-serif;
+letter-spacing: 1px;
 }
 .colect{
     color: #cbc4d2;
     font-family: 'Space Grotesk', sans-serif;
     margin-top: -25px;
+    font-size: 20px;
 }
 #find {
 padding: 5px;
@@ -193,39 +196,49 @@ margin: 15px 0;
 }
 
 .btns {
-margin-bottom: 20px;
+margin-bottom: -5px;
+
 }
 
 .b1 {
-padding: 5px 10px;
+padding: 8px 13px;
 border-radius: 10px;
 border: 1px solid #555;
 background: none;
 color: white;
 cursor: pointer;
-margin-right: 5px;
+margin-right: 15px;
+font-size: 15px;
 }
 
 .grid {
-display: block;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
 .item {
-width: 592px;
+width: 100%;
 display: inline-block;
-margin: 5px;
+/* margin: 5px 25px 25px 0px; */
 background: #020719;
 position: relative;
-height: 300px;
+height: 325px;
 border-radius: 12px;
 overflow: hidden;
 vertical-align: top;
+
 }
+
 
 .item img {
 width: 100%;
 height: 100%;
-
+transition: all 0.3s ease;
+}
+.item img:hover{
+    transform: scale(1.05);
+    
 }
 .item::after {
     content: '';
@@ -243,9 +256,9 @@ height: 100%;
 position: absolute;
 color: white;
 font-family: 'Space Grotesk', sans-serif;
-bottom: 5px;
-left: 10px;
-font-size: 17px;
+bottom: 15px;
+left: 15px;
+font-size: 20px;
 margin: 0;
 z-index: 1;
 }
