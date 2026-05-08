@@ -169,7 +169,7 @@ ul.nav-settings{
 /* main */
 
 .content-area {
-padding: 20px;
+padding-left: 20px;
 }
 
 .title {
@@ -211,12 +211,12 @@ display: block;
 }
 
 .item {
-width: 45%;
+width: 592px;
 display: inline-block;
 margin: 5px;
 background: #020719;
 position: relative;
-height: 150px;
+height: 300px;
 border-radius: 12px;
 overflow: hidden;
 vertical-align: top;
@@ -225,7 +225,6 @@ vertical-align: top;
 .item img {
 width: 100%;
 height: 100%;
-object-fit: cover;
 opacity: 0.6;
 }
 
