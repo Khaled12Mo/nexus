@@ -1,4 +1,4 @@
-/* saidbar الاكواد دي علشان تمنع تداخل اي حاجه مع ال فوتر و ال */
+/* sidebar الاكواد دي علشان تمنع تداخل اي حاجه مع ال فوتر و ال */
 body {
     display: flex; 
     margin: 0;
@@ -280,7 +280,6 @@ ul.nav-settings{
     color: #cbc4d2;
     font-size: 22px;
     padding: 13px;
-    
     cursor: pointer;
 }
 .icon-btn:hover{
@@ -448,9 +447,7 @@ ul.nav-settings{
 .galary{
     display: flex;
     align-items: center;
-    
     box-sizing: border-box;
-    gap: 1px;
 }
 .photo img,.photo video{
     width: 105px;
@@ -458,11 +455,10 @@ ul.nav-settings{
     filter: brightness(0.6); 
     transition: all 0.3s ease;
     border-radius: 12px;
+    margin-right: 4.4px;
 }
 .photo img:hover,.photo video:hover {
     cursor: pointer;
-    filter: brightness(1.2);
-    
     transform: scale(1.05);
 }
 .main-slide{
@@ -474,7 +470,7 @@ ul.nav-settings{
 .active-slide{
     cursor: pointer;
     filter: brightness(1.2) !important;
-    transform: scale(1.05) ;
+    transform: scale(1.05) ; 
 }
 
 /*Light Mode*/
@@ -508,6 +504,8 @@ body.light a.nav-item-active:visited {
 body.light .nav-settings{
     border-top: 1px solid #ddd;
 }
+
+
 body.light .main-footer {
     background-color: #ffffff;
     border-top: 1px solid #ddd;
@@ -519,6 +517,8 @@ body.light .footer-text,
 body.light .footer-links a {
     color: #666;
 }
+
+
 body.light .player-stats-card,
 body.light .about-game-container,
 body.light .requirements-card,
@@ -580,8 +580,10 @@ body.light .photo video {
     filter: brightness(0.8); 
 }
 body.light .active-slide {
-     filter: brightness(1.2) !important;
+    filter: brightness(1.2) !important;
+    
     transition: all 0.3s ease; 
+    
 }
 body.light .main-slide {
     border-radius: 12px;
