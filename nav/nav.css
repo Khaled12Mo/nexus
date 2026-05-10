@@ -1,0 +1,93 @@
+.sidebar{
+    border: 5px solid #020719;   
+    background-color: #020719;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18%;                 
+    height: 100%;   
+    border-right: 1px solid #1c2031;             
+}
+a.nexus:link,
+a.nexus:visited,
+a.nexus:hover,
+a.nexus:active {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: #8b5cf6;
+    text-decoration: none;
+    height: 55px;
+    padding: 30px;
+}
+a.nav-item:link,
+a.nav-item:visited,
+a.nav-item:active {
+    display: flex; 
+    align-items: center; 
+    padding: 16px 32px;
+    color: #948e9c; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+a.nav-item:hover{
+    color: #937ae0;
+    background-color: #0f1425; 
+    padding-left: 40px;
+    border-radius: 8px;
+}
+a.nav-item-active:link,
+a.nav-item-active:visited,
+a.nav-item-active:hover,
+a.nav-item-active:active{
+   display: flex; 
+    align-items: center; 
+    padding: 16px 32px;
+    color: #937ae0; 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    background-color: #1e1845;    
+    border-left: 4px solid #8b5cf6; 
+    border-radius: 0px 8px 8px 0px;   
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+.nav-item i {
+    margin-right: 15px; 
+    font-size: 20px;
+}
+.nav-item-active i{
+    margin-right: 15px; 
+    font-size: 18px;
+}
+a.nav-item,
+a.nav-item-active {
+    margin-bottom: 12px; 
+}
+ul.nav-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 13%;
+}
+ul.nav-settings{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 27%;
+    border-top: 1px solid #1c2031;
+    padding-top: 10px;
+    
+}
