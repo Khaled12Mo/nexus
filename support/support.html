@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-
-  <!-- SIDEBAR -->
   <!-- SIDEBAR -->
 
     <nav class="sidebar">
@@ -40,8 +38,8 @@
         <span class="badge-dot"></span>
         SECURE COMMS
       </div>
-      <h1>INITIALIZE CONTACT.</h1>
-      <p>Our support operatives are standing by. Transmit your inquiry for priority routing.</p>
+      <h1>CONTACT SUPPORT.</h1>
+      <p>Our support team is ready to help with purchases, accounts, and game services.</p>
     </header>
 
     <div class="form-area">
@@ -49,52 +47,55 @@
       <div class="form-card">
         <div class="form-row">
           <div class="form-group">
-            <label for="callsign">CALLSIGN / NAME</label>
-            <input id="callsign" type="text" placeholder="Enter identification" />
+            <label for="callsign">GAMER TAG / NAME</label>
+            <input id="callsign" type="text" placeholder="Enter your gamer name" />
           </div>
           <div class="form-group">
-            <label for="commlink">COMM LINK / EMAIL</label>
+            <label for="commlink">EMAIL ADDRESS</label>
             <input id="commlink" type="email" placeholder="transmission@address.net" />
           </div>
         </div>
         <div class="form-group">
-          <label for="category">ROUTING CATEGORY</label>
+          <label for="category">GAME CATEGORY</label>
           <select id="category">
-            <option disabled selected value="">Select routing vector</option>
-            <option value="Report Anomaly">Report Anomaly</option>
-            <option value="General Inquiry">General Inquiry</option>
+            <option disabled selected value="">Select support category</option>
+            <option value="Account Issues">Account Issues</option>
             <option value="Technical Support">Technical Support</option>
+            <option value="Bug Report">Bug Report</option>
+            <option value="Payment & Billing">Payment & Billing</option>
+            <option value="Refund Request">Refund Request</option>
+            <option value="Other">Other</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="message">DATA PACKET</label>
-          <textarea id="message" rows="5" placeholder="Detail your transmission here..."></textarea>
+          <label for="message">ORDER DETAILS</label>
+          <textarea id="message" rows="5" placeholder="Tell us what games or services you need..."></textarea>
         </div>
         <div class="form-footer">
           <div class="checkbox-group">
             <input id="urgent" type="checkbox" />
-            <label for="urgent">Flag as urgent priority</label>
+            <label for="urgent">Notify me about special offers</label>
           </div>
           <button class="btn-transmit" id="transmitBtn" type="button">
-            TRANSMIT <span class="mat-icon">send</span>
+            PLACE ORDER <span class="mat-icon">send</span>
           </button>
         </div>
       </div>
 
       <div class="info-card">
-        <h3>DIRECT CHANNELS</h3>
+        <h3>GAMER SERVICES</h3>
         <a class="channel-item" href="#">
           <div class="channel-icon icon-primary"><span class="mat-icon">support_agent</span></div>
           <div>
-            <div class="channel-label">LIVE COMM-LINK</div>
-            <div class="channel-desc">Available 24/7 for Elite Tier operatives.</div>
+            <div class="channel-label">24/7 SUPPORT</div>
+            <div class="channel-desc">We’re online anytime to help gamers instantly.</div>
           </div>
         </a>
         <a class="channel-item" href="#">
           <div class="channel-icon icon-secondary"><span class="mat-icon">forum</span></div>
           <div>
-            <div class="channel-label">COMMUNITY FORUMS</div>
-            <div class="channel-desc">Access the collective knowledge base.</div>
+            <div class="channel-label">GAMING COMMUNITY</div>
+            <div class="channel-desc">Join players, reviews, and latest gaming discussions.</div>
           </div>
         </a>
       </div>
