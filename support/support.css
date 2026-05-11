@@ -39,9 +39,6 @@
   --bg-hover:       #e0e0e8;
 }
 
-/* ── Reset ── */
-/* *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; } */
-
 body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
@@ -188,7 +185,7 @@ ul.nav-settings{
   transform: scale(1.05);
 }
 
-/* ── Page Header ── */
+
 header {
   text-align: center;
   font-family: 'Space Grotesk', sans-serif;
@@ -246,7 +243,7 @@ header p {
   flex: 1;
 }
 
-/* Form card */
+
 .form-card {
   flex: 2;
   min-width: 280px;
