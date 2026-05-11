@@ -306,6 +306,7 @@ ul.nav-settings {
     width: 100%;
     position: static;
     height: auto;
+    display :none;
   }
   .main-wrapper {
     margin-left: 0;
