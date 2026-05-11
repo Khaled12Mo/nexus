@@ -57,7 +57,7 @@ body{
     border: 5px solid var(--bg-sidebar-dark);   
     top: 0;
     left: 0;
-    width: 20%;                 
+    width: 18%;                 
     height: 100%;   
     border-right: 1px solid var(--border-dark);
     margin: auto; 
@@ -68,10 +68,10 @@ main{
     margin-bottom:50PX ;
 }
 .containt{
-    width: 80vw;
+    width: 82%;
     flex-direction: column;
     position: relative;
-    margin-left: 20vw;
+    margin-left: 18vw;
     transition: 0.3s ease;
     margin-right: 0; 
     display: flex; 
