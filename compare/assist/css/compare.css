@@ -190,7 +190,7 @@ select:hover{
 select:focus{
     outline: none;
     border-color: var(--color-primary);
-    color: var(--text-secondary);
+    color: var(--text-primary);
 }
 .hidden{
 transform: translateX(-100%);  
