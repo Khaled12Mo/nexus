@@ -300,7 +300,7 @@ genreButtons.forEach(button => {
             selectedGenres.add(genre);
             button.classList.add('active');
         }
-
+        
         applyFilters();
     });
 });
