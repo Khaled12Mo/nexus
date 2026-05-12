@@ -1,71 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <link rel="stylesheet" href="./profile.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
     <nav class="sidebar">
-     
-        <div>
-            <h1 ><a class="nexus" href="../index.html">NEXUS</a></h1>
-        </div>
-        <ul class="nav-list">
-            <li><a class="nav-item" href="../index.html"><i class="bi bi-house-door"></i>HOME</a></li>
-            <li><a class="nav-item" href="../library/library.html"><i class="bi bi-controller"></i>LIBRARY</a></li>
-            <li><a class="nav-item" href="../search/search.html"><i class="bi bi-search"></i>SEARCH</a></li>
-            <li><a class="nav-item" href="../compare/compare.html"><i class="bi bi-arrow-left-right"></i>COMPARE</a></li>
-            <li><a class="nav-item-active" href="../profile/profile.html"><i class="bi bi-person"></i>PROFILE</a></li>
-            <li><a class="nav-item" href="../support/support.html"><i class="bi bi-headset"></i>SUPPORT</a></li>
-            <li><a class="nav-item" href="../login/login.html"><i class="bi bi-gear"></i>LOG IN</a></li>
-        </ul>
+      <div>
+        <h1><a class="nexus" href="../index.html">NEXUS</a></h1>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a class="nav-item" href="../index.html"
+            ><i class="bi bi-house-door"></i>HOME</a
+          >
+        </li>
+        <li>
+          <a class="nav-item" href="../library/library.html"
+            ><i class="bi bi-controller"></i>LIBRARY</a
+          >
+        </li>
+        <li>
+          <a class="nav-item" href="../search/search.html"
+            ><i class="bi bi-search"></i>SEARCH</a
+          >
+        </li>
+        <li>
+          <a class="nav-item" href="../compare/compare.html"
+            ><i class="bi bi-arrow-left-right"></i>COMPARE</a
+          >
+        </li>
+        <li>
+          <a class="nav-item-active" href="../profile/profile.html"
+            ><i class="bi bi-person"></i>PROFILE</a
+          >
+        </li>
+        <li>
+          <a class="nav-item" href="../support/support.html"
+            ><i class="bi bi-headset"></i>SUPPORT</a
+          >
+        </li>
+        <li>
+          <a class="nav-item" href="../login/login.html"
+            ><i class="bi bi-gear"></i>LOG IN</a
+          >
+        </li>
+      </ul>
     </nav>
 
     <!-- Main Content Area -->
     <main class="main-content">
-        
-        <div class="top-section">
-            <div class="profile-card">
-                <div class="avatar-wrapper">
-                    <img src="../images/man.png" alt="User Avatar" class="avatar-img">
-                    <div class="edit-btn">
-                        <i class="bi bi-pen"></i>
-                    </div>
-                </div>
-                
-                <div class="user-details">
-                    <h1>CYBER_KNIGHT</h1>
-                    <p class="user-name">Elite Tier Subscriber</p>
-                    <div class="tags">
-                        <span class="tag">FPS</span>
-                        <span class="tag">RPG</span>
-                        <span class="tag">STREAMER</span>
-                    </div>
-                </div>
+      <div class="top-section">
+        <div class="mode">
+          <button class="theme" id="themeBtn">🌙</button>
+        </div>
+        <div class="profile-card">
+          <div class="avatar-wrapper">
+            <img src="../images/man.png" alt="User Avatar" class="avatar-img" />
+            <div class="edit-btn">
+              <i class="bi bi-pen"></i>
             </div>
+          </div>
 
-            <!-- Stats Side Cards -->
-            <div class="stats-section">
-                
-                <div class="stat-card">
-                    <i class="fa-solid fa-medal"></i>
-                    <h2>124</h2>
-                    <p>ACHIEVEMENTS</p>
-                </div>
-
-                <div class="stat-card">
-                    <i class="fa-solid fa-stopwatch"></i>
-                    <h2>842h</h2>
-                    <p>PLAYTIME</p>
-                </div>
+          <div class="user-details">
+            <h1>CYBER_KNIGHT</h1>
+            <p class="user-name">Elite Tier Subscriber</p>
+            <div class="tags">
+              <span class="tag">FPS</span>
+              <span class="tag">RPG</span>
+              <span class="tag">STREAMER</span>
             </div>
+          </div>
         </div>
 
+        <!-- Stats Side Cards -->
+        <div class="stats-section">
+          <div class="stat-card">
+            <i class="fa-solid fa-medal"></i>
+            <h2>124</h2>
+            <p>ACHIEVEMENTS</p>
+          </div>
+
+          <div class="stat-card">
+            <i class="fa-solid fa-stopwatch"></i>
+            <h2>842h</h2>
+            <p>PLAYTIME</p>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-brand">NEXUS</div>
+
+        <div class="footer-text">
+          © 2026 NEXUS GAMING. ENGINEERED FOR PERFORMANCE.
+        </div>
+
+        <div class="footer-links">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">TERMS OF SERVICE</a>
+        </div>
+      </footer>
     </main>
     <script src="profile.js"></script>
-</body>
+  </body>
 </html>
