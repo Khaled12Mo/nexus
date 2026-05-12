@@ -39,9 +39,6 @@
   --bg-hover:       #e0e0e8;
 }
 
-/* ── Reset ── */
-/* *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; } */
-
 body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
@@ -54,19 +51,16 @@ body {
 
 .sidebar{
     border: 5px solid #020719;
-    background-color: #020719;
+    background-color: var(--bg-sidebar-dark);
     position: fixed;
     top: 0;
     left: 0;
     width: 18%;
     height: 100%;
-    border-right: 1px solid #1c2031;
+    border-right: 1px solid var(--border-dark);
     box-sizing: border-box;
 }
-a.nexus:link,
-a.nexus:visited,
-a.nexus:hover,
-a.nexus:active {
+a.nexus {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -76,14 +70,11 @@ a.nexus:active {
     height: 55px;
     padding: 30px;
 }
-a.nav-item:link,
-a.nav-item:visited,
-a.nav-item:active {
+a.nav-item {
     display: flex; 
     align-items: center; 
     padding: 16px 32px;
     color: #948e9c; 
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -97,20 +88,15 @@ a.nav-item:hover{
     padding-left: 40px;
     border-radius: 8px;
 }
-a.nav-item-active:link,
-a.nav-item-active:visited,
-a.nav-item-active:hover,
-a.nav-item-active:active{
+a.nav-item-active{
     display: flex; 
     align-items: center; 
     padding: 16px 32px;
     color: #937ae0; 
-    font-family: 'Plus Jakarta Sans', sans-serif; 
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.05em;
     text-decoration: none;
-    transition: 0.3s;
     position: relative;
     background-color: #1e1845;    
     border-left: 4px solid #8b5cf6; 
@@ -136,20 +122,9 @@ ul.nav-list{
     position: relative;
     top: 13%;
 }
-ul.nav-settings{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: 27%;
-    border-top: 1px solid #1c2031;
-    padding-top: 10px;
-    
-}
 
-
-.containt {
-  width: 80%;
+.content {
+  width:  90%;
   margin-left: 18%;
   display: flex;
   flex-direction: column;
@@ -157,17 +132,19 @@ ul.nav-settings{
   transition: 0.3s ease;
 }
 
-.containt.full { width: 100%; margin-left: 0; }
+.content.full { width: 100%; margin-left: 0; }
 
 
 .top {
+  position: fixed;
+  top: 10px;
+  right: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  z-index: 1000;
 }
 
-.menu, .theme {
+.theme {
   background: var(--bg-footer);
   border: 1px solid #2e2e50;
   color: var(--text-primary);
@@ -182,13 +159,13 @@ ul.nav-settings{
   font-size: 20px;
 }
 
-.menu:hover, .theme:hover {
+.theme:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
   transform: scale(1.05);
 }
 
-/* ── Page Header ── */
+
 header {
   text-align: center;
   font-family: 'Space Grotesk', sans-serif;
@@ -246,7 +223,7 @@ header p {
   flex: 1;
 }
 
-/* Form card */
+
 .form-card {
   flex: 2;
   min-width: 280px;
@@ -330,7 +307,7 @@ header p {
 
 .form-row {
   display: flex;
-  gap: 16px;
+  gap: 35px;
 }
 
 .form-row .form-group { flex: 1; }
@@ -347,13 +324,12 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-  width: 100%;
+  width: 98%;
   padding: 10px 14px;
   border-radius: 10px;
   border: 2px solid var(--border-light);
   background-color: var(--bg-input-dark);
   color: var(--text-primary);
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
   transition: 0.25s;
 }
@@ -409,7 +385,6 @@ input[type="checkbox"] {
   border: none;
   padding: 10px 24px;
   border-radius: 10px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -480,7 +455,6 @@ input[type="checkbox"] {
   max-width: 360px;
   padding: 14px 20px;
   border-radius: 12px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
@@ -494,17 +468,3 @@ input[type="checkbox"] {
 .nexus-toast.show { transform: translateY(0); opacity: 1; }
 .nexus-toast.success { background: #0d2a1e; border: 1px solid #166534; color: #86efac; }
 .nexus-toast.error   { background: #3b0a0a; border: 1px solid #7f1d1d; color: #fca5a5; }
-
-
-@media (max-width: 768px) {
-  .sidebar { width: 100%; z-index: 100; }
-  .sidebar.hidden { transform: translateX(-100%); z-index: -1; }
-
-  .containt { width: 100%; margin-left: 0; }
-  .containt.full { z-index: 1; }
-
-  .form-row { flex-direction: column; }
-
-  .main-footer { flex-direction: column; text-align: center; gap: 10px; padding: 16px; }
-  .footer-text { margin-right: 0; }
-}

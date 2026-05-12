@@ -1,22 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuBtn");
-  const sidebar = document.getElementById("sidebar");
-  const containt = document.getElementById("containt");
-
-  if (menuBtn) {
-    menuBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("hidden");
-      containt.classList.toggle("full");
-    });
-  }
 
   const themeBtn = document.getElementById("themeBtn");
   if (themeBtn) {
     themeBtn.addEventListener("click", () => {
       document.body.classList.toggle("light");
       themeBtn.textContent = document.body.classList.contains("light")
-        ? "🌙"
-        : "☀️";
+        ? "☀️"
+        : "🌙";
     });
   }
 
@@ -55,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("message").value = "";
         document.getElementById("urgent").checked = false;
 
-        btn.innerHTML = 'TRANSMIT <span class="mat-icon">send</span>';
+        btn.innerHTML = 'PLACE ORDER <span class="mat-icon">send</span>';
         btn.disabled = false;
       }, 2000);
     });
